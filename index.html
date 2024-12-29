@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <!-- css bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+
+    <!-- animate  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav bar start-->
+    <nav class="navbar navbar-expand-md sticky-top shadow-sm nav-bg">
+        <div class="container-fluid">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="image/IMG_20240924_142602_514.png" alt="" id="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto" id="nav-order">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promotions.html">Order</a>
+                    </li>
+                </ul>
+                <div class="nav-item d-flex" id="nav-icon">
+                    <div class="d-inline me-2">
+                        <a href="auth.html" class="btn text-white" role="button" id="login-btn">
+                            Login
+                        </a>
+                    </div>
+                    <div class="d-inline mt-1 me-2">
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar end  -->
+
+    <!-- home start  -->
+    <section id="home" class="container-fluid">
+        <div class="row pt-1 pb-5">
+            <div class="col-lg-8 px-2">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="image/671b64082f78dIMG_2728.png" class="d-block" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000" id="home-poster-content">
+                            <img src="image/671b641ebc79fIMG_2729.png" class="d-block" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000" id="home-poster-content">
+                            <img src="image/675992ba5a11eweb-cover-sized (2).png" class="d-block" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000" id="home-poster-content">
+                            <img src="image/675992c32cf2aweb-cover-sized (1).png" class="d-block" alt="...">
+                        </div>
+                    </div>
+                    <!-- <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="container-lg" id="search-ticket">
+                    <div class="row mx-auto text-white align-items-center">
+                        <h4>FIND TICKET NOW</h4>
+                    </div>
+        
+                    <div class="mt-3" id="home-search">
+                        <div class="">
+                            <form action="" id="cinema-form">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-4 col-sm-12">
+                                        <div class="custom-select">
+                                            <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                                <span class="selected-value"><i class="fa-solid fa-map-location-dot"></i>Location</span>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <ul class="select-dropdown" role="listbox" >
+                                                <li role="option">
+                                                    <input type="radio" id="c-location1" name="cinemaLocation"/>
+                                                    <label for="c-location1">South Dagon</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-location2" name="cinemaLocation"/>
+                                                    <label for="c-location2">North Dagon</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-location3" name="cinemaLocation"/>
+                                                    <label for="c-location3">East Dagon</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-location4" name="cinemaLocation"/>
+                                                    <label for="c-location4">West Dagon</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-3 col-sm-12">
+                                        <div class="custom-select">
+                                            <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                                <span class="selected-value"><i class="fa-regular fa-calendar-check"></i>Date</span>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <ul class="select-dropdown" role="listbox" >
+                                                <li role="option">
+                                                    <input type="radio" id="c-date1" name="cinemaDate"/>
+                                                    <label for="c-date1">4/02/2023</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-date2" name="cinemaDate"/>
+                                                    <label for="c-date2">10/03/2021</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-date3" name="cinemaDate"/>
+                                                    <label for="c-date3">11/08/2021</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-date4" name="cinemaDate"/>
+                                                    <label for="c-date4">20/12/2024</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-4 col-sm-12">
+                                        <div class="custom-select">
+                                            <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                                <span class="selected-value"><i class="fa-solid fa-film"></i>Movie</span>
+                                                <span class="arrow"></span>
+                                            </button>
+                                            <ul class="select-dropdown" role="listbox" >
+                                                <li role="option">
+                                                    <input type="radio" id="c-movie1" name="cinemaMovie"/>
+                                                    <label for="c-movie1">Raya And The Last Dragon</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-movie2" name="cinemaMovie"/>
+                                                    <label for="c-movie2">Avengers Infinity War</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-movie3" name="cinemaMovie"/>
+                                                    <label for="c-movie3">OutLaw</label>
+                                                </li>
+                                                <li role="option">
+                                                    <input type="radio" id="c-movie4" name="cinemaMovie"/>
+                                                    <label for="c-movie4">Wish Dragon</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-1 col-sm-12 mt-1 text-end">
+                                        <button type="submit" class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>  
+        
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home end  -->
+
+    <!-- now showing movie start  -->
+    <section class="container-lg" id="now-showing-movie">
+        <div class="d-flex align-content-center justify-content-between">
+            <div id="span-block">
+                <span></span>
+                <h4 class="fw-bold home-text">Movies</h4>
+            </div>
+            <a href="movies.html" class="text-decoration-none" id="view-more">
+                <button class="btn border-0 shadow-none fw-medium">View More <i class="fa-solid fa-arrow-right-long ms-1"></i></button>
+            </a>
+        </div>
+        <hr>
+        <div class="row" id="now-movie-list">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/676d2ce6d94e1sonic3.png"  alt="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>Sonic The Hedgehog 3</h5>
+                        </div>
+                    </a>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1 rate-display">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/The_Garfield_Movie_2024_poster.jpg"  alt="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>Wish Dragon</h5>
+                        </div>
+                    </a>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1 rate-display">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"  alt="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>Raya And The Last Dragon</h5>
+                        </div>
+                    </a>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1 rate-display">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/Wish-Dragon.webp"  alt="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>Wish Dragon</h5>
+                        </div>
+                    </a>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1 rate-display">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/small-spos8674-poster-movie-the-lion-king-mufasa-wall-poster-sl-original-imaghzwansyt5m4b.webp"  alt="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>The Lion King</h5>
+                        </div>    
+                    </a>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1 rate-display">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg"  alt="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>Raya And The Last Dragon</h5>
+                        </div> 
+                    </a>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1 rate-display">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- now showing movie end -->
+
+    <!-- promotion start  -->
+    <section class="container-lg" id="promotion">
+        <div class="d-flex align-content-center justify-content-between">
+            <div id="span-block">
+                <span></span>
+                <h4 class="fw-bold home-text">Promotions</h4>
+            </div>
+            <a href="promotions.html" class="text-decoration-none" id="view-more">
+                <button class="btn border-0 shadow-none fw-medium">View More <i class="fa-solid fa-arrow-right-long ms-1"></i></button>
+            </a>
+        </div>
+        <hr>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=""><img src="image/GSC-Minions-Promo-at-Subang-Parade.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/pngtree-free-movie-poster-flyer-cinema-png-image_4301443.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/movie-promo-poster_1284-8010.avif" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/GSC-Minions-Promo-at-Subang-Parade.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/pngtree-free-movie-poster-flyer-cinema-png-image_4301443.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/movie-promo-poster_1284-8010.avif" class="w-100 d-block rounded" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- promotion end -->
+
+    <!-- footer section start  -->
+    <section id="footer">
+        <div class="px-4 pt-5">
+            <div class="row mb-4">
+                <div class="col-lg-4 mb-5">
+                    <h5>Subscribe Newsletter</h5>
+                    <p class="mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <form action="" class="mt-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Address" aria-describedby="button-addon2">
+                            <button class="btn btn-warning" type="submit" id="button-addon2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            <div id="footer-simple" class="ps-5">
+                                <h5>Pages</h5>
+                                <ul class="mt-3">
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Movies</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Promotions</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Contact Us</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Order History</a></li>
+                                </ul>
+                            </div>
+                            <div id="footer-dropdown">
+                                <div id="toggle-btn">
+                                    <button class="btn fw-medium">Pages</button>
+                                    <span>
+                                        <i class="fa-solid fa-chevron-down" id="down"></i>
+                                        <i class="fa-solid fa-chevron-up" id="up"></i>
+                                    </span>
+                                </div> 
+                                <ul id="drop-items">
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Movies</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Contact Us</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Promotions</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Order History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <div>
+                                <h5>About Us</h5>
+                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque facere distinctio placeat possimus harum temporibus officia hic totam perspiciatis eaque molestiae incidunt quibusdam, perferendis, itaque praesentium laboriosam! Reiciendis, corporis.</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-4">
+                                <h6>connect with us : </h6>
+                                <div class="d-flex ms-4 mb-1" id="footer-icon">
+                                    <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex align-items-center justify-content-between" id="footer-bottom">
+                <p>© 2024 Your Company Name. All rights reserved.</p>
+                <p id="developer">Developed By : <a href="">Alex</a> & <a href="">HP</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- footer section end -->
+</body>
+
+    <!-- js bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- js  -->
+    <script src="script.js"></script>
+
+</html>

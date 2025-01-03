@@ -1,763 +1,152 @@
 body{
-    background-color: var(--body);
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: scroll;
+    margin: 0 auto;
+    background-color: #fdfafa;
+    color: var(--side-bar);
+    animation: fadeIn 0.5s ease-in-out;
 }
 :root{
-    --body: #091e30;
-    --nav-bar: #0f2e56;
-    --secondary: #3c91c9;
-    --gold: #FFD700;
-    --teal: #5febcf;
-    --tran-bg: rgba(71, 71, 71, 0.106);
+    --side-bar: #1b2d45;
+    --green: rgb(20, 179, 20);
+    --light-gray-blue: #47527096;
 }
 
-
-/*.......................................... nav bar start ................................... */
-.switch{
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 3.5em;
-    height: 1.8em;
-}
-.switch input{
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.switch .slider{
-    --background: var(--body);
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--background);
-    transition: .5s;
-    border-radius: 30px;
-}
-.switch .slider:before{
-    position: absolute;
-    content: "";
-    height: 1.2em;
-    width: 1.2em;
-    border-radius: 50%;
-    left: 16%;
-    bottom: 15%;
-    box-shadow: inset 8px -4px 0px 0px var(--gold);
-    background: var(--background);
-    transition: .5s;
-}
-.switch input:checked + .slider{
-    background-color: var(--body);
-}
-.switch input:checked + .slider:before{
-    transform: translateX(100%);
-    box-shadow: inset 15px -4px 0px 15px var(--gold);
-}
-
-.nav-bg{
-    background-color: var(--nav-bar);
-}
-#logo-img{
-    display: block;
-    width: 120px;
-    height: 50px;
-    object-fit: cover;
-}
-#cinema-label{
-    margin-top: 4px;
-    color: var(--gold);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-#login-btn,
-#logout-btn{
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.644);
-}
-.my-account{
-    display: none;
-}
-.nav-link.active{
-    color: var(--gold) !important;
-}
-#nav-order > li > a{
-    color: white;
-    padding: 8px 30px;
-    margin: 0 10px;
-    font-size: 12pt;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#nav-order > li > a:hover,
-.nav-item a i:hover,
-.nav-item button:hover,
-#login-btn:hover,
-#logout-btn:hover{
-    color: var(--gold) !important;
-}
-.navbar-toggler{
-    border: none;
-    color: white;
-    box-shadow: none;
-    outline: 0;
-}
-.navbar-toggler:focus{
-    box-shadow: none;
-}
-@media screen and (max-width: 767px){
-    #nav-icon{
-        display: flex;
-    }
-    .navbar-nav li{
-        padding: 8px 0;
-    }
-    #nav-icon{
-        border-top: 1px solid rgb(242, 240, 240);
-        padding-left: 20px;
-        padding-top: 15px;
-        margin: 10px 0;
-    }
-    .my-account{
-        display: block;
-        margin-left: 12px;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 992px){
-    #nav-order > li > a{
-        margin: 0;
-        padding:0 20px;
-    }
-}
-@media screen and (max-width: 348px){
-    #cinema-label > h5{
-        font-size: 12pt !important;
-    }
-    #nav-order > li > a{
-        font-size: 11pt;
-    }
-}
-/*.......................................... nav bar end ................................... */
-
-
-/* ......................... change color start ............................ */
-.light{
-    --nav-bar: #1b4064;
-    --body: #fefefe;
-    --teal: #25c19f;
-    --gold: #fee20d;
-    --tran-bg: rgba(24, 53, 87, 0.747);
-}
-.light .home-text-light,
-.light hr{
-    color: rgb(35, 34, 34);
-}
-/* ......................... change color end ........................... */
-  
-
-/*.......................................... home section start ................................... */
-#home{
-    position: relative;
-    width: 100%;
-    background-color: rgba(71, 71, 71, 0.134);
-}
-.carousel{
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: rgba(99, 99, 99, 0.277) 0px 2px 8px 0px;
-}
-.carousel-item > img{
-    position: relative;
-    width: 100%;
-    height: 580px;
-    object-fit: cover;
-    margin: auto;
-}
-#search-ticket{
-    margin-top: 40px;
-    background-color:  var(--nav-bar);
-    padding: 30px 25px;
-    border-radius: 10px;
-    z-index: 9999 !important;
-}
-#home-search{
-    background-color: var(--body);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-.group{
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
-.input{
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    height: 45px;
-    padding-left: 2.5rem;
-    border: 0;
-    border-radius: 5px;
-    background-color: transparent;
-    outline: none;
-    color: white;
-    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    cursor: text;
-    z-index: 0;
-    border: 1px solid white;
-}
-.input::placeholder{
-    color: #ececec;
-}
-.search-icon{
-    position: absolute;
-    left: 1rem;
-    fill: #ececec;
-    width: 1rem;
-    height: 1rem;
-    pointer-events: none;
-    z-index: 1;
-}
-#cinema-form .col-sm-12{
-    margin-bottom: 18px;
-}
-#cinema-form .col-sm-11{
-    margin-bottom: 8px;
-}
-@media screen and (min-width: 992px) and (max-width: 1200px){
-    .carousel-item > img{
-        width: 100%;
-        height: 500px;
-    }
-}
-@media screen and (max-width: 992px){
-    .carousel{
-        padding: 0;
-        border-radius: 10px;
-        box-shadow: none;
-    }
-    #home .pt-1,
-    #home .col-lg-8{
-        padding: 0 !important;
-    }
-    #search-ticket{
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-    #home-search{
-        padding: 20px 20px 0;
-    }
-    .carousel-item > img{
-        position: relative;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
-}
-@media screen and (max-width: 575px){
-    #home > .row > .col-lg-4{
-        padding: 0;
-    }
-    #search-ticket{
-        margin-top: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
-    .carousel-item > img{
-        position: relative;
-        width: 100%;
-        height: 270px;
-        object-fit: cover;
-    }
-}
-@media screen and (max-width: 348px){
-    #search-ticket h4{
-        font-size: 14pt;
-        margin-bottom: 0;
-        margin-left: -10px;
-    }
-    .input{
-        height: 40px;
-    }
-    .input::placeholder{
-        font-size: 11pt;
-    }
-    .select-button,
-    #cinema-form .text-end i{
-        font-size: 1rem !important;
-    }
-}
-
-.custom-select{
-    position: relative;
-    width: 100%;
-    font-size: 1.14rem;
-    color: white;
-}
-.select-button{
-    width: 100%;
-    font-size: 1.14rem;
-    background-color: var(--tran-bg);
-    padding: 8px 10px;
-    border: 1px solid rgba(255, 255, 255, 0.527);
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.selected-value,
-.sorting-selected-value{
-    text-align: left;
-}
-.selected-value > i{
-    color: var(--teal);
-    margin-right: 8px;
-}
-.arrow{
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid white;
-    transition: transform ease-in-out 0.3s;
-}
-.select-dropdown{
-    position: absolute;
+li{
     list-style: none;
-    width: 100%;
-    background-color: var(--nav-bar);
-    border: 1px solid #dadde0;
-    border-radius: 4px;
-    padding: 10px;
-    margin-top: 5px;
-    max-height: 170px;
-    overflow-y: auto;
-    transition: 0.5s ease;
-    transform: scaleY(0);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
 }
-.select-dropdown li,
-.sorting-dropdown li{
-    position: relative;
-    cursor: pointer;
+.wrapper{
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    font-size: 12pt;
 }
-.select-dropdown li label,
-.sorting-dropdown li label{
-    width: 100%;
-    padding: 8px 10px;
-    cursor: pointer;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-.select-dropdown::-webkit-scrollbar{
-    width: 5px;
-}
-.select-dropdown::-webkit-scrollbar-track{
-    background: #a5a5a5;
-    border-radius: 25px;
-}
-.select-dropdown::-webkit-scrollbar-thumb{
-    background: var(--teal);
-    border-radius: 25px;
-}
-.select-dropdown li:hover{
-    color: var(--teal);
-}
-.select-dropdown input:checked ~ label,
-.select-dropdown input:focus ~ label{
-    background-color: #ffffff30;
-    color: white;
-}
-.select-dropdown input[type="radio"],
-.sorting-dropdown input[type="radio"]{
-    position: absolute;
-    left: 0;
-    opacity: 0;
-}
-.custom-select.active .arrow,
-.sorting-content.active .arrow{
-    transform: rotate(180deg);
-}
-.custom-select.active .select-dropdown,
-.sorting-content.active .sorting-dropdown{
-    opacity: 1;
-    visibility: visible;
-    transform: scaleY(1);
-}
-.search-btn{
-    background-color: var(--nav-bar);
-    color: var(--teal);
-}
-.search-btn:hover{
-    background-color: var(--nav-bar);
-    color: var(--teal);
-    border: 1px solid white;
-}
-/*.......................................... home section end ................................... */
-
-
-/*.......................................... now showing movie start ................................... */
-#now-showing-movie,
-#feature-trailer,
-#promotion,
-#cinema-details{
-    margin: 70px auto 80px;
-}
-#span-block{
-    display: flex; 
-    align-items: center;
-}
-#span-block > span{
-    display: inline-block;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--teal);
-    width: 20px;
-    height: 3px;
-    border-radius: 20px;
-    margin-right: 10px;
-    margin-bottom: 18px !important;
-}
-#view-more > button{
-    color: var(--teal);
-    margin-bottom: 5px;
-}
-#now-movie-list > .col-lg-3 > div{
-    background-color: var(--tran-bg);
-    padding: 18px 15px 10px;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-}
-#now-movie-list a{
-    color: white;
-    text-decoration: none;
-}
-#now-movie-list .zoom-img ~ .d-flex {
-    height: 40px;
-    text-align: center;
-    margin-top: 15px;
-}
-.zoom-img{
-    width: 100%;
-    height:auto;
+.main{
+    background-color: #fafbfe;
+    min-height: 100vh;
     overflow: hidden;
-    border-radius: 10px;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
 }
-.zoom-img img{
-    display: block;
-    margin: auto;
-    width: 190px;
-    height: 310px; 
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.253);
-    padding: 5px;
-}
-#now-movie-list a > div:last-child{
-    margin-top: 14px;
-    text-align: center;
-    height: 40px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.373);
-}
-#now-movie-list a > div:last-child > h5{
-    font-size: 13pt;
-}
-#now-movie-list a:hover{
-    color: var(--gold);
-}
-#ticket-btn span i{
-    color: black;
-}
-#ticket-btn{
-    background-color: var(--gold);
-    color: black;
-}
-#ticket-btn label{
-    cursor: pointer;
-}
-@media screen and (max-width: 575px){
-    #now-movie-list #ticket-btn,
-    #now-movie-list > .col-lg-3 .d-flex p{
-        font-size: 10pt !important;
-    }
-    #now-movie-list a h5{
-        font-size: 12pt !important;
-    }
-    #now-movie-list > .col-lg-3 > div{
-        padding: 10px !important;
-    }
-    .zoom-img img{
-        display: block;
-        margin: auto;
-        width: 130px;
-        height: 200px;
-        object-fit: cover;
-    }
-    #span-block > span{
-        width: 13px;
-        height: 3px;
-    }
-    #now-movie-list{
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-@media screen and (max-width: 410px){
-    .zoom-img img:hover{
-        transform: none;
-    }
-    .rate-display{
-        display: none;
-    }
-    #now-movie-list > .col-lg-3 > div .d-flex{
-        justify-content: center !important;
-    }
-    #now-movie-list a h5{
-        font-size: 10pt !important;
-    }
-    #now-movie-list #ticket-btn,
-    #now-movie-list > .col-lg-3 .d-flex p{
-        font-size: 9pt !important;
-    }
-}
-@media screen and (max-width: 365px){
-    #now-movie-list{
-        background-color: var(--tran-bg);
-        border-radius: 8px;
-    }
-    #now-movie-list > .col-lg-3 > div{
-        background-color: transparent !important;
-        border: none;
-        box-shadow: none;
-        padding: 0 !important;
-        margin-top: 20px;
-    }
-}
-/*.......................................... now showing movie end ................................... */
-
-
-
-/*.......................................... promotion start ................................... */
-.swiper{
-    position: relative;
+#sidebar{
+    background-color: var(--side-bar);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 25px auto;
-    width: 100%;
-    padding: 0 20px 40px;
-    z-index: 0;
+    min-width: 95px;
+    transition: all 0.25s ease-in-out;
+    width: 95px;
+    z-index: 1000;
+    padding: 0 15px 0 8px;
+    height: 100vh;
 }
-.mySwiper2 .swiper-slide img{
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
+#sidebar.expand{
+    width: 350px;
 }
-.mySwiper2 .swiper-pagination-bullet-active{
-    background-color: var(--teal);
-    opacity: 1;
+.toggle-btn{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 22px;
 }
-@media screen and (max-width: 720px){
-    .mySwiper2 .swiper-slide img{
-        display: block;
-        width: 200px !important;
-        height: 200px;
-        margin: auto;
-    }
+.toggle-btn i{
+    color: #fff;
+    font-size: 1.5rem;
 }
-@media screen and (max-width: 693px){
-    .mySwiper2 .swiper-slide img{
-        display: block;
-        width: 280px !important;
-        height: 280px !important;
-        margin: auto;
-    }
+.sidebar-logo{
+    margin: auto 0;
+    text-wrap: nowrap;
 }
-@media screen and (max-width: 630px){
-    .mySwiper2 .swiper-slide img{
-        display: block;
-        width: 220px !important;
-        height: 220px;
-        margin: auto;
-    }
-}
-@media screen and (max-width: 518px){
-    .mySwiper2 .swiper-slide img{
-        display: block;
-        width: 100% !important;
-        height: 220px !important;
-        margin: auto;
-    }
-}
-@media screen and (max-width: 400px){
-    #other-promotion{
-        padding: 50px 0 40px 0 !important;
-    }
-    .mySwiper2{
-        padding-bottom: 40px;
-    }
-    .mySwiper2 .swiper-pagination-bullet{
-        margin-bottom: 0 !important;
-        z-index: 1;
-    }
-    #other-promo-label{
-        margin-bottom: 20px;
-    }
-    #other-promo-label > h4{
-        font-size: 14pt;
-    }
-    #other-promo-label > span{
-        width: 15px !important;
-        margin-right: 10px !important;
-    }
-}
-@media screen and (max-width: 358px){
-    .mySwiper2 .swiper-slide img{
-        display: block;
-        width: 100% !important;
-        height: 200px !important;
-        margin: auto;
-    }
-}
-
-/*.......................................... promotion end ................................... */ 
-
-
-/*.......................................... footer section start ................................... */
-#footer{
-    background-color: #1d262f;
-}
-#footer input:focus{
-    box-shadow: none;
-    border: 1px solid var(--gold);
-}
-#footer h5,
-#toggle-btn button{
-    text-transform: uppercase;
-    font-size: 15pt;
-    color: white;
-}
-#footer h6{
-    text-transform: uppercase;
-    font-size: 10pt;
-}
-#footer p{
-    color: rgb(230, 227, 227);
-    line-height: 25px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
-    -webkit-box-orient: vertical;
-}
-#footer-icon a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sidebar-logo a{
+    color: #fff;
     text-decoration: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 20%;
-    font-size: 12pt;
-    border: 1px solid var(--gold);
-    margin-right: 12px;
 }
-#footer-icon a:hover{
-    color: var(--gold);
+
+.sidebar-nav{
+    padding-left: 8px;
+    padding-right: 32px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-top: 1px solid rgb(143, 143, 143);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: -15px;
 }
-#footer-simple ul,
-#footer-dropdown ul{
-    list-style: none;
-    text-align: left;
-    padding-left: 0;
+.sidebar-nav::-webkit-scrollbar{
+    width: 3px;
+    margin-right: -10px;
 }
-#footer-simple ul li,
-#footer-dropdown ul li{
-    padding: 5px 0;
+.sidebar-nav::-webkit-scrollbar-thumb{
+    background-color: var(--green);
 }
-#footer-simple ul li a,
-#footer-dropdown ul li a{
-    text-decoration: none;
-    color: rgb(230, 227, 227);
-    font-size: 12pt;
+.sidebar-nav::-webkit-scrollbar-track{
+    background-color: var(--light-gray-blue);
 }
-#footer-simple ul li a i,
-#footer-dropdown ul li a i{
-    color: var(--gold);
-}
-#footer-simple ul li a:hover,
-#footer-dropdown ul li a:hover{
-    color: var(--gold);
-}
-#footer-dropdown{
-    display: none;
-}
-#toggle-btn button{
-    width: fit-content;
-    text-align: left;
-    margin-left: -14px;
-    border: none;
-}
-#footer-dropdown div{
-    display: flex;
-    align-items: center;
-    padding-right: 15px;
-    border-radius: 4px;
-}
-#down{
+.sidebar-link-name{
+    color: #fff;
     display: block;
-    font-size: 10pt;
-    margin-left: 9px;
-}
-#up{
-    display: none;
-    font-size: 10pt;
-    margin-left: 9px;
-}
-#footer-bottom a{
+    padding: 6px;
+    white-space: nowrap;
     text-decoration: none;
+}
+
+.sidebar-link-name svg{
+    margin: 3px 15px 5px 3px;
+}
+.sidebar-link-name span{
+    font-size: 13pt;
+}
+.sidebar-link-name:hover,
+.sidebar-link:hover{
+    color: var(--green);
+}
+
+.sidebar-item{
+    position: relative;
+    margin-bottom: 22px;
+}
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link-name span,
+#sidebar:not(.expand) .sidebar-link{
+  display: none;
+}
+.sidebar-link-name.active,
+.sidebar-link.active{
+    background-color: var(--light-gray-blue);
+    color: var(--green);
+    border-radius: 5px;
+}
+.sidebar-link-name.active svg path{
+    color: var(--green);
+}
+.sidebar-link{
+    display: block;
+    width: 90%;
     color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    font-size: 11pt;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-@media screen and (max-width: 768px){
-    #footer-dropdown{
-        display: block;
-        margin-bottom: 25px;
-    }
-    #footer-simple{
-        display: none;
-    }
-    #footer h5,
-    #toggle-btn button{
-        font-size: 13pt;
-        font-weight: bold !important;
-    }
-    #developer{
-        display: none;
-    }
+.sidebar-dropdown.hide{
+    display: none;
 }
-@media screen and (max-width: 400px){
-    #down,#up{
-        margin-left: 1px;
-    }
-    #footer-dropdown{
-        margin-top: -15px !important;
-    }
+.sidebar-link-name[data-bs-toggle="collapse"]::after{
+    border: solid;
+    border-width:0 1px 1px 0;
+    content: "";
+    display: block;
+    padding: 3px;
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    /* transform: rotate(-135deg); */
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+    border-color: var(--green);
 }
-/*.......................................... footer section end ................................... */
+/* .sidebar-link-name[data-bs-toggle="collapse"].collapsed::after{
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+} */
+#sidebar:not(.expand) .sidebar-link-name[data-bs-toggle="collapse"]::after {
+    right: -14px;
+}

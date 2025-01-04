@@ -213,8 +213,8 @@ nav h4{
         visibility: visible;
     }
     nav h4{
-        margin-left: 0;
-        font-size: 14pt;
+        margin-left: -8px;
+        font-size: 13pt;
     }
     nav{
         box-shadow: none;

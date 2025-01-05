@@ -15,7 +15,7 @@ body{
     }
 }
 :root{
-    --side-bar: #1e2836;
+    --side-bar: #222e40;
     --nav-bar: rgb(27, 48, 77);
     --blue: rgb(77, 195, 254);
     --light-gray-blue: #4b587c96;
@@ -158,11 +158,10 @@ body{
 
 /* ...............................main start  ..........................*/
 .main {
+    width: 100%;
     transition: all 0.35s ease-in-out;
     min-height: 100vh;
 }
-
-
 nav{
     color: white;
     background-color: var(--nav-bar);
@@ -236,4 +235,14 @@ nav h4{
         margin-right: 20px !important;
     }
 }
+@media screen and (min-width: 1500px){
+    #sidebar{
+        width: 100px;
+    }
+}
+/* @media screen and (min-width: 1800px){
+    #sidebar{
+        width: 5%;
+    }
+} */
 /* ...............................main end  ..........................*/

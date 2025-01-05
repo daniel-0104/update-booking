@@ -1,59 +1,60 @@
 //................................ dashboard side bar toggle start .......................
 document.addEventListener('DOMContentLoaded', () => {
-    const hamBurgers = document.querySelectorAll('.toggle-btn');
-    const sidebar = document.querySelector('#sidebar');
-    const sidebarNav = document.querySelector('.sidebar-nav');
-    const links = document.querySelectorAll('.sidebar-link-name, .sidebar-link');
+  const hamBurgers = document.querySelectorAll('.toggle-btn');
+  const sidebar = document.querySelector('#sidebar');
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  const links = document.querySelectorAll('.sidebar-link-name, .sidebar-link');
 
-  const toggleSidebar = (state) => {
-    sidebar.classList.toggle('expand', state);
-    sessionStorage.setItem('sidebar-state', state ? 'expanded' : 'collapsed');
-  };
-  toggleSidebar(sessionStorage.getItem('sidebar-state') === 'expanded');
+const toggleSidebar = (state) => {
+  sidebar.classList.toggle('expand', state);
+  sessionStorage.setItem('sidebar-state', state ? 'expanded' : 'collapsed');
+};
+toggleSidebar(sessionStorage.getItem('sidebar-state') === 'expanded');
 
 
-  hamBurgers.forEach((hamBurger) => {
-    hamBurger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleSidebar(!sidebar.classList.contains('expand'));
-    });
+hamBurgers.forEach((hamBurger) => {
+  hamBurger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleSidebar(!sidebar.classList.contains('expand'));
+  });
 });
 
 
 document.body.addEventListener('click', function (event) {
-  if (window.innerWidth >= 992 && !sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
-      toggleSidebar(false);
-  }
+if (window.innerWidth >= 992 && !sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+    toggleSidebar(false);
+}
 });
-// document.body.addEventListener('click', () => toggleSidebar(false));
 
-  sidebar.addEventListener('click', (e) => e.stopPropagation());
+sidebar.addEventListener('click', (e) => e.stopPropagation());
 
-  links.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const parentItem = link.closest('.sidebar-item');
-      const hasDropdown = parentItem?.querySelector('.sidebar-dropdown');
-      if (link.classList.contains('sidebar-link-name') && hasDropdown) {
-        toggleSidebar(true);
-      } else {
-        toggleSidebar(false);
-      }
-      links.forEach((l) => l.classList.remove('active'));
-      (parentItem?.querySelector('.sidebar-link-name') || link).classList.add('active');
-    });
+const currentURL = new URL(window.location.href);
 
-    const href = link.getAttribute('href');
-    if (window.location.pathname.includes(href)) {
-      const parentLink = link.closest('.sidebar-item')?.querySelector('.sidebar-link-name');
-      (parentLink || link).classList.add('active');
+links.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const parentItem = link.closest('.sidebar-item');
+    const hasDropdown = parentItem?.querySelector('.sidebar-dropdown');
+    if (link.classList.contains('sidebar-link-name') && hasDropdown) {
+      toggleSidebar(true);
+    } else {
+      toggleSidebar(false);
     }
+    links.forEach((l) => l.classList.remove('active'));
+    (parentItem?.querySelector('.sidebar-link-name') || link).classList.add('active');
   });
 
-  sidebarNav.scrollTop = +sessionStorage.getItem('sidebar-scroll-position') || 0;
-  sidebarNav.addEventListener('scroll', () =>
-    sessionStorage.setItem('sidebar-scroll-position', sidebarNav.scrollTop)
-  );
+  const href = link.getAttribute('href');
+  if (href && (currentURL.pathname === href || currentURL.href.includes(href))) {
+      const parentLink = link.closest('.sidebar-item')?.querySelector('.sidebar-link-name');
+      (parentLink || link).classList.add('active');
+  }
+});
+
+sidebarNav.scrollTop = +sessionStorage.getItem('sidebar-scroll-position') || 0;
+sidebarNav.addEventListener('scroll', () =>
+  sessionStorage.setItem('sidebar-scroll-position', sidebarNav.scrollTop)
+);
 });
 //................................ dashboard side bar toggle end .......................
 

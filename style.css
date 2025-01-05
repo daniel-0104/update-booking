@@ -15,8 +15,10 @@ body{
     }
 }
 :root{
-    --side-bar: #222e40;
-    --nav-bar: rgb(27, 48, 77);
+    --side-bar: rgb(14, 52, 77);
+    --light-gray: #f3f9fa;
+    --teal:  #3cb7cd;
+    --nav-bar: white;
     --blue: rgb(77, 195, 254);
     --light-gray-blue: #4b587c96;
 }
@@ -163,34 +165,35 @@ body{
     min-height: 100vh;
 }
 nav{
-    color: white;
     background-color: var(--nav-bar);
 }
 .navbar-expand .navbar-nav{
     margin-left: auto;
-}
-nav .toggle-btn i{
-    color: white;
 }
 nav > button{
     opacity: 0;
     visibility: hidden;
 }
 nav h4{
-    margin-left: -35px;
-    font-weight: bold;
+    margin-left: -42px;
 }
 .navbar-collapse{
     margin-right: 20px;
 }
-.dropdown-menu{
-    background-color: var(--side-bar) !important;
+.dropdown-menu form button{
+    margin-left: -10px;
+    color: rgb(250, 64, 64);
 }
-.dropdown-item{
-    color: white;
+.dropdown-menu form button:hover{
+    color: rgb(250, 64, 64);
 }
-.dropdown-item:hover {
-    background-color: var(--light-gray-blue) !important;
+.dropdown-item:hover{
+    color: var(--teal)!important;
+    background-color: transparent !important;
+}
+.dropdown-item:focus,
+.dropdown-menu form button:focus{
+    border: none;
 }
 @media screen and (max-width: 1160px){
     #sidebar{
@@ -240,9 +243,4 @@ nav h4{
         width: 100px;
     }
 }
-/* @media screen and (min-width: 1800px){
-    #sidebar{
-        width: 5%;
-    }
-} */
 /* ...............................main end  ..........................*/

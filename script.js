@@ -1,3 +1,4 @@
+//................................ dashboard side bar toggle start .......................
 document.addEventListener('DOMContentLoaded', () => {
     const hamBurgers = document.querySelectorAll('.toggle-btn');
     const sidebar = document.querySelector('#sidebar');
@@ -21,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.body.addEventListener('click', function (event) {
   if (window.innerWidth >= 992 && !sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
-      toggleSidebar(false); // Close the sidebar when clicking outside
+      toggleSidebar(false);
   }
 });
-  // document.body.addEventListener('click', () => toggleSidebar(false));
+// document.body.addEventListener('click', () => toggleSidebar(false));
 
   sidebar.addEventListener('click', (e) => e.stopPropagation());
 
@@ -54,10 +55,10 @@ document.body.addEventListener('click', function (event) {
     sessionStorage.setItem('sidebar-scroll-position', sidebarNav.scrollTop)
   );
 });
+//................................ dashboard side bar toggle end .......................
 
 
-
-//................................ sidebar toggle start .......................
+//................................ sidebar toggle phone size start .......................
 const sidebarToggle = document.querySelector("#sidebar-toggle");
 const sidebar = document.querySelector("#sidebar");
 
@@ -66,4 +67,4 @@ sidebarToggle.addEventListener("click", function () {
 
 });
 
-//............................... sidebar toggle end .......................
+//............................... sidebar toggle phone size  end .......................

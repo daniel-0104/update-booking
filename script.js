@@ -67,5 +67,4 @@ sidebarToggle.addEventListener("click", function () {
   sidebar.classList.toggle("active");
 
 });
-
 //............................... sidebar toggle phone size  end .......................

@@ -163,6 +163,7 @@ body{
     width: 100%;
     transition: all 0.35s ease-in-out;
     min-height: 100vh;
+    overflow-x: auto;
 }
 nav{
     background-color: var(--nav-bar);
@@ -244,3 +245,33 @@ nav h4{
     }
 }
 /* ...............................main end  ..........................*/
+
+
+#table-bg{
+    background-color: rgb(255, 251, 251);
+    color: black;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 1px 2px 3px 2px rgb(187, 187, 187);
+    border-radius: 10px;
+}
+.table, td, th{
+    border: 1px solid black;
+}
+.table-responsive{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 253, 253);
+}
+thead{
+    color: var(--light-gray);
+    background-color: var(--light-gray-blue);
+}
+td{
+    padding: 20px !important;
+    font-weight: 500;
+    font-family:sans-serif;
+}

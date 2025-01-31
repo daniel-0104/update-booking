@@ -1,6 +1,5 @@
 body{
     font-family: 'Poppins', sans-serif;
-    overflow-y: scroll;
     margin: 0 auto;
     background-color: #fafbfe;
     color: var(--side-bar);
@@ -25,6 +24,8 @@ body{
 .wrapper {
     display: flex;
     width: 100%;
+    height: 100vh;
+    overflow: hidden; 
 }
 .form-control:focus{
     outline: 0;
@@ -163,7 +164,7 @@ body{
     width: 100%;
     transition: all 0.35s ease-in-out;
     min-height: 100vh;
-    overflow-x: auto;
+    overflow-y: auto;
 }
 nav{
     background-color: var(--nav-bar);
@@ -254,9 +255,6 @@ nav h4{
     box-shadow: 1px 2px 3px 2px rgb(187, 187, 187);
     border-radius: 10px;
 }
-.table, td, th{
-    border: 1px solid black;
-}
 .table-responsive{
     overflow-x: auto;
     white-space: nowrap;
@@ -265,13 +263,22 @@ nav h4{
     width: 100%;
     border-collapse: collapse;
     background-color: rgb(255, 253, 253);
+    border: 1px solid #e5dfdf;
+}
+.table tbody tr:nth-child(even){
+    background-color: rgb(195 195 195 / 16%);
+}
+.table a{
+	margin-top: -2px;
+	padding: 4px 10px;
+	font-size: 11pt;
 }
 thead{
     color: var(--light-gray);
-    background-color: var(--light-gray-blue);
+    background-color: rgb(35, 72, 96);
 }
 td{
-    padding: 20px !important;
+    padding: 9px 20px !important;
     font-weight: 500;
     font-family:sans-serif;
 }

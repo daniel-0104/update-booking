@@ -248,12 +248,16 @@ nav h4{
 /* ...............................main end  ..........................*/
 
 
-#table-bg{
+
+/* #table-bg{
     background-color: rgb(255, 251, 251);
     color: black;
     padding: 10px 20px 20px 20px;
     box-shadow: 1px 2px 3px 2px rgb(187, 187, 187);
     border-radius: 10px;
+}
+.table, td, th{
+    border: 1px solid black;
 }
 .table-responsive{
     overflow-x: auto;
@@ -263,22 +267,52 @@ nav h4{
     width: 100%;
     border-collapse: collapse;
     background-color: rgb(255, 253, 253);
-    border: 1px solid #e5dfdf;
-}
-.table tbody tr:nth-child(even){
-    background-color: rgb(195 195 195 / 16%);
-}
-.table a{
-	margin-top: -2px;
-	padding: 4px 10px;
-	font-size: 11pt;
 }
 thead{
     color: var(--light-gray);
-    background-color: rgb(35, 72, 96);
+    background-color: var(--light-gray-blue);
 }
 td{
-    padding: 9px 20px !important;
+    padding: 20px !important;
     font-weight: 500;
     font-family:sans-serif;
+} */
+
+#table-bg{
+    background-color: rgb(255, 251, 251);
+    color: black;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 1px 2px 3px 2px rgb(187, 187, 187);
+    border-radius: 10px;
+}
+.report-table{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.report-table table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 253, 253);
+    border: 1px solid #e5dfdf;
+}
+.report-table table tbody tr:nth-child(even){
+    background-color: rgb(195 195 195 / 16%);
+}
+.report-table table a{
+	padding: 4px 6px;
+	font-size: 9pt;
+}
+.report-table table thead{
+    color: var(--light-gray);
+    background-color: rgb(35, 72, 96);
+} 
+.report-table table th{
+    padding: 10px 20px;
+}
+.report-table table td{
+    padding: 4px 20px;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 10pt;
+    border: none;
 }

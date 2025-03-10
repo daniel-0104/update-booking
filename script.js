@@ -68,3 +68,31 @@ sidebarToggle.addEventListener("click", function () {
 
 });
 //............................... sidebar toggle phone size  end .......................
+
+
+//............................... report view active start .............................
+const reportViewLink = document.getElementsByClassName('report-view-link');
+  const reportTable = document.getElementById('report-table-view');
+  const reportGraph = document.getElementById('report-graph-view');
+
+  let currentIndex = 0;
+
+  function reportClick(event, elementId){
+    event.preventDefault();
+    const clickReport = event.target;
+
+    if(clickReport.classList.contains('.report-view-active')){
+      return;
+    }
+
+    for(let link of reportViewLink){
+      link.classList.remove('report-view-active');
+    }
+
+    clickReport.classList.add('report-view-active');
+    currentIndex = Array.from(reportViewLink).indexOf(clickReport);
+
+    reportTable.style.display = elementId === 'reportTable' ? 'block' : 'none';
+    reportGraph.style.display = elementId === 'reportGraph' ? 'block' : 'none';
+  }
+//............................... report view active end .............................

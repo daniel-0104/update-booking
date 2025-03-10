@@ -256,18 +256,8 @@
             <main class="content px-3 py-3">
                 <div class="summary-re-content">
                     <div class="summary-re-title">
-                        <h5>Daily Report</h5>
-                        <div class="dropdown dropdown-menu-end">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Choose Cinema
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Cinema 1</a></li>
-                              <li><a class="dropdown-item" href="#">Cinema 2</a></li>
-                              <li><a class="dropdown-item" href="#">Cinema 3</a></li>
-                            </ul>
-                        </div>
-                        <!-- <form action="">
+                        <h5>Report Summary</h5>
+                        <form action="">
                             <div class="d-flex gap-1 flex-wrap">
                                 <div class="me-1">
                                     <select name="">
@@ -289,7 +279,7 @@
                                 </div>
                                 <button id="summary-re-btn" class="btn">Filter</button>
                             </div>
-                        </form> -->
+                        </form>
                     </div>
                     <div class="summary-cards mt-4">
                         <div class="row">
@@ -332,168 +322,185 @@
                         </div>
                     </div>
                 </div>
-                <div class="report-content">
-                    <div class="report-title d-flex align-items-center justify-content-between mb-1">
-                        <h5>Movie Plan</h5>
-                        <a href="">
-                            <button class="px-2 py-1">Export<i class="fa-solid fa-download ms-2"></i></button>
-                        </a>
-                    </div>
-                    <div class="report-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Movie Name</th>
-                                    <th>Cinema Name</th>
-                                    <th>Hall Name</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Total Seats</th>
-                                    <th>Total Incomes</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Tenement</td>
-                                    <td>Cinema 1 ( Yangon )</td>
-                                    <td>Hall 3</td>
-                                    <td>2025-03-05</td>
-                                    <td>10:30</td>
-                                    <td>0</td>
-                                    <td class="text-end">0</td>
-                                    <td>
-                                        <a href="" class="btn btn-outline-primary">See more</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Tenement</td>
-                                    <td>Cinema 3 ( Mandalay )</td>
-                                    <td>Hall 3</td>
-                                    <td>2025-03-05</td>
-                                    <td>10:30</td>
-                                    <td>0</td>
-                                    <td class="text-end">0</td>
-                                    <td>
-                                        <a href="" class="btn btn-outline-primary">See more</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Tenement</td>
-                                    <td>Cinema 1 ( Yangon )</td>
-                                    <td>Hall 3</td>
-                                    <td>2025-03-05</td>
-                                    <td>10:30</td>
-                                    <td>0</td>
-                                    <td class="text-end">0</td>
-                                    <td>
-                                        <a href="" class="btn btn-outline-primary">See more</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Tenement</td>
-                                    <td>Cinema 3 ( Mandalay )</td>
-                                    <td>Hall 3</td>
-                                    <td>2025-03-05</td>
-                                    <td>10:30</td>
-                                    <td>0</td>
-                                    <td class="text-end">0</td>
-                                    <td>
-                                        <a href="" class="btn btn-outline-primary">See more</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Tenement</td>
-                                    <td>Cinema 1 ( Yangon )</td>
-                                    <td>Hall 3</td>
-                                    <td>2025-03-05</td>
-                                    <td>10:30</td>
-                                    <td>0</td>
-                                    <td class="text-end">0</td>
-                                    <td>
-                                        <a href="" class="btn btn-outline-primary">See more</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
 
-                <div class="report-content">
-                    <div class="report-title d-flex align-items-center justify-content-between mb-1">
-                        <h5>Cinema Income</h5>
-                        <a href="">
-                            <button class="px-2 py-1">Export<i class="fa-solid fa-download ms-2"></i></button>
-                        </a>
-                    </div>
-                    <div class="report-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Cinema Name</th>
-                                    <th>Seat Count</th>
-                                    <th>Income</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Cinema 1</td>
-                                    <td>20</td>
-                                    <td>330,000</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Cinema 1</td>
-                                    <td>20</td>
-                                    <td>330,000</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Cinema 2</td>
-                                    <td>50</td>
-                                    <td>830,000</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Cinema 2</td>
-                                    <td>20</td>
-                                    <td>130,000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="report-graph p-4">
-                    <div>
-                        <h5>Movie</h5>
-                        <canvas id="movie"></canvas>
-                    </div>
-                </div>
-
-                <div class="report-graph p-4">
-                    <div class="row">
-                        <div class="col-lg-8 col-sm-8">
-                            <div>
-                                <h5>Show Time</h5>
-                                <canvas id="show-time"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div>
-                                <h5>Genre</h5>
-                                <canvas id="genre"></canvas>
-                            </div>
+                <div>
+                    <div id="report-view-content">
+                        <div class="d-flex align-items-center">
+                            <a href="javascript:void(0);" class="report-view-link report-view-active" onclick="reportClick(event,'reportTable');">
+                                Table View
+                            </a>
+                            <a href="javascript:void(0);" class="report-view-link" onclick="reportClick(event,'reportGraph');">
+                                Graph View
+                            </a>
                         </div>
                     </div>
+                    
+                   <div id="report-table-view">
+                        <div class="report-content">
+                            <div class="report-title d-flex align-items-center justify-content-between mb-1">
+                                <h5>Movie Plan</h5>
+                                <a href="">
+                                    <button class="px-2 py-1">Export<i class="fa-solid fa-download ms-2"></i></button>
+                                </a>
+                            </div>
+                            <div class="report-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Movie Name</th>
+                                            <th>Cinema Name</th>
+                                            <th>Hall Name</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Total Seats</th>
+                                            <th>Total Incomes</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Tenement</td>
+                                            <td>Cinema 1 ( Yangon )</td>
+                                            <td>Hall 3</td>
+                                            <td>2025-03-05</td>
+                                            <td>10:30</td>
+                                            <td>0</td>
+                                            <td class="text-end">0</td>
+                                            <td>
+                                                <a href="" class="btn btn-outline-primary">See more</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Tenement</td>
+                                            <td>Cinema 3 ( Mandalay )</td>
+                                            <td>Hall 3</td>
+                                            <td>2025-03-05</td>
+                                            <td>10:30</td>
+                                            <td>0</td>
+                                            <td class="text-end">0</td>
+                                            <td>
+                                                <a href="" class="btn btn-outline-primary">See more</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Tenement</td>
+                                            <td>Cinema 1 ( Yangon )</td>
+                                            <td>Hall 3</td>
+                                            <td>2025-03-05</td>
+                                            <td>10:30</td>
+                                            <td>0</td>
+                                            <td class="text-end">0</td>
+                                            <td>
+                                                <a href="" class="btn btn-outline-primary">See more</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Tenement</td>
+                                            <td>Cinema 3 ( Mandalay )</td>
+                                            <td>Hall 3</td>
+                                            <td>2025-03-05</td>
+                                            <td>10:30</td>
+                                            <td>0</td>
+                                            <td class="text-end">0</td>
+                                            <td>
+                                                <a href="" class="btn btn-outline-primary">See more</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Tenement</td>
+                                            <td>Cinema 1 ( Yangon )</td>
+                                            <td>Hall 3</td>
+                                            <td>2025-03-05</td>
+                                            <td>10:30</td>
+                                            <td>0</td>
+                                            <td class="text-end">0</td>
+                                            <td>
+                                                <a href="" class="btn btn-outline-primary">See more</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <div class="report-content">
+                            <div class="report-title d-flex align-items-center justify-content-between mb-1">
+                                <h5>Cinema Income</h5>
+                                <a href="">
+                                    <button class="px-2 py-1">Export<i class="fa-solid fa-download ms-2"></i></button>
+                                </a>
+                            </div>
+                            <div class="report-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Cinema Name</th>
+                                            <th>Seat Count</th>
+                                            <th>Income</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Cinema 1</td>
+                                            <td>20</td>
+                                            <td>330,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Cinema 1</td>
+                                            <td>20</td>
+                                            <td>330,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Cinema 2</td>
+                                            <td>50</td>
+                                            <td>830,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Cinema 2</td>
+                                            <td>20</td>
+                                            <td>130,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                   </div>
+    
+                   <div id="report-graph-view">
+                        <div class="report-graph p-4">
+                            <div>
+                                <h5>Movie</h5>
+                                <canvas id="movie"></canvas>
+                            </div>
+                        </div>
+                        <div class="report-graph p-4">
+                            <div class="row">
+                                <div class="col-lg-8 col-sm-8">
+                                    <div>
+                                        <h5>Show Time</h5>
+                                        <canvas id="show-time"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div>
+                                        <h5>Genre</h5>
+                                        <canvas id="genre"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
                 </div>
             </main>
             <!-- admin dashboard end -->

@@ -43,6 +43,7 @@ body{
     padding: 0 15px 0 8px;
     position: sticky;
     top: 0; 
+    z-index: 9999;
 }
 #sidebar > .d-flex{
     border-bottom: 1px solid rgba(204, 204, 204, 0.767);
@@ -288,6 +289,8 @@ td{
 .report-table{
     overflow-x: auto;
     white-space: nowrap;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 40px;
 }
 .report-table table{
     width: 100%;
@@ -303,6 +306,9 @@ td{
 	font-size: 9pt;
 }
 .report-table table thead{
+    /* background-color: rgb(255, 255, 255);
+    color: var(--side-bar);
+    border: 1px solid rgb(225, 225, 225); */
     color: var(--light-gray);
     background-color: rgb(35, 72, 96);
 } 
@@ -315,4 +321,106 @@ td{
     font-family: sans-serif;
     font-size: 10pt;
     border: none;
+}
+
+/* start from here */
+.report-content,
+.report-graph{
+    margin: 30px 0 70px;
+}
+.report-graph{
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(235, 235, 235);
+}
+.summary-re-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.summary-re-title form select:hover{
+    cursor: pointer;
+}
+.summary-re-title form select,
+.summary-re-title .dropdown button,
+.summary-re-title .dropdown button:focus{
+    font-size: 11pt;
+    background-color: rgb(244, 244, 244);
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(214, 214, 214);
+}
+.summary-re-title .dropdown-menu > li{
+    font-size: 11pt;
+}
+#summary-re-btn{
+    background-color: var(--side-bar);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.summary-cards .row > div > div{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.summary-cards .row > div > div label{
+    color: rgb(65, 65, 65);
+    font-size: 11pt;
+}
+.summary-cards .row > div > div p{
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+.rep-success{
+    background-color: rgb(64, 145, 13);
+}
+.rep-pending{
+    background-color:  #c6b30a;
+}
+.rep-booking{
+    background-color: #09b9c3;
+}
+.rep-reject{
+    background-color: rgb(205, 34, 34);
+}
+
+.report-title h5,
+.report-graph h5{
+    color: rgb(59, 59, 59);
+}
+.report-title button{
+    background-color: rgb(25, 123, 172);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.report-title button i{
+    font-size: 10pt;
+}
+@media screen and (max-width: 765px){
+    .summary-re-title{
+        display: block;
+        width: 100%;
+    }
+}
+
+
+#report-view-content > div{
+    width: fit-content;
+    background-color: var(--light-gray);
+    margin-top: 15px;
+}
+#report-view-content a{
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 11pt;
+}
+#report-view-content a.report-view-active{
+    background-color: rgb(25, 123, 172);
+    color: white;
+}
+#report-graph-view{
+    display: none;
 }
